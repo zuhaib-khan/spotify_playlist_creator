@@ -1,9 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
 
-# date_selection = input("Enter the year whose playlist you want in YYYY-MM-DD format.")
+date_selection = input("Enter the year whose playlist you want in YYYY-MM-DD format: ")
 
-URL = f'https://www.billboard.com/charts/hot-100/2000-08-12/'
+URL = f'https://www.billboard.com/charts/hot-100/{date_selection}/'
 
 response = requests.get(URL)
 website_data = response.text
